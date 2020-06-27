@@ -92,6 +92,13 @@
 		<lib-copy lib="bitcollider-core"/>
 	</target>
 
+        <target name="package-unbundled" depends="build" description="build ${pkg.contrib} without dependencies">
+		<jar jarfile="${main.dst}/${pkg.contrib}.jar" basedir="${main.make}" includes="**" update="yes" duplicate="fail" level="9">
+			<exclude name="${version.src}"/>
+		</jar>
+	</target>
+
+
 	<target name="clean" description="clean standard build products">
 		<delete dir="${main.make}"/>
 		<delete dir="${main.dst}"/>
