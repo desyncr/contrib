@@ -46,6 +46,14 @@ The build script compiles all the locally-maintained packages, and collects
 them into freenet-ext.jar. It then retrieves all the remote source packages,
 and builds those.
 
+## Notes on unbundled version
+
+You can build a freenet-ext package without dependencies with the following task:
+
+    $ ant package-unbundled
+    
+This package only contains ExtVersion and Support.
+
 ## Notes on locally maintained libraries
 
 [onion-common]
